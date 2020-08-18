@@ -72,6 +72,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.btn-video__wrapper2 {
+    align-items: stretch;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
 .btn-video__title {
     border:none;
     flex-grow: 1;
