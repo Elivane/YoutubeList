@@ -55,16 +55,22 @@ function configButtonClick() {
 
 }
 
+function removeMusicas() {
+    if (confirm("Deseja realmente remover a música?")) {
+        let indice = Number(this.getAttribute("data-music-indice"));
+        console.log(typeof indice, indice);
+        musicas.splice(indice, 1);
+        renderizaMusicas(musicas);
+    };
+}
+
+
+
 function configDeleteMusica() {
     let btnDelete = document.querySelectorAll("[data-music-indice]");
     console.log(btnDelete);
     btnDelete.forEach((obj) => {
-        obj.onclick = function () {
-            let indice = Number(this.getAttribute("data-music-indice"));
-            console.log(typeof indice, indice);
-            musicas.splice(indice, 1);
-            renderizaMusicas(musicas);
-        };
+        obj.onclick = removeMusicas;
 
     });
 
