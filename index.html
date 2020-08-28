@@ -21,7 +21,8 @@
     </header>
 
     <section>
-        <iframe width="100%" src="https://www.youtube.com/embed/e9VLnw17RJ8" frameborder="0"
+        <iframe 
+        data-frame-musica width="100%" src="https://www.youtube.com/embed/e9VLnw17RJ8" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!--  <iframe width="100%" src="https://www.youtube.com/embed/7sbbb7Dt3D8" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -33,18 +34,18 @@
     </main>
 
     <footer class="footer__main">
-        <button type="button" class="btn btn__primary btn__add">
+        <button type="button" class="btn btn__primary btn__add" data-btn-add>
             Adicionar <i class="fa fa-plus"></i>
         </button>
 
-        <form class="form__new-video" style="display: none;">
+        <form class="form__new-video hidden" data-form-add>
             <div class="form-group">
                 <label for="">Título do vídeo: </label>
-                <input type="text" />
+                <input type="text" id="txtTitulo"required />
             </div>
             <div class="form-group">
                 <label for="">Código do vídeo </label>
-                <input type="text" />
+                <input type="text" id="txtCodigo"required />
             </div>
             <button type="submit" class="btn btn__primary">Cadastrar</button>
         </form>
